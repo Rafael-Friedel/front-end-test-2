@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "json-server --watch db.json",
     "tailwindcss": "npx tailwindcss -i ./input.css -o ./assets/css/style.css  --minify --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
