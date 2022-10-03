@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header__top,
+.header__main,
+.header__bottom {
+  @apply py-1;
+}
+
+.container {
+  @apply mx-auto w-full px-2 lg:max-w-7xl;
+}
+
+.row {
+  @apply flex flex-wrap -mx-2;
+}
+
+.col {
+  @apply w-full px-2;
+}
+
+.col-1 {
+  @apply lg:w-1/12;
+}
+
+.col-2 {
+  @apply lg:w-2/12;
+}
+
+.col-3 {
+  @apply lg:w-3/12;
+}
+
+.col-4 {
+  @apply lg:w-4/12;
+}
+
+.col-5 {
+  @apply lg:w-5/12;
+}
+
+.col-6 {
+  @apply lg:w-6/12;
+}
+
+.col-7 {
+  @apply lg:w-7/12;
+}
+
+.col-8 {
+  @apply lg:w-8/12;
+}
+
+.col-9 {
+  @apply lg:w-9/12;
+}
+
+.col-10 {
+  @apply lg:w-10/12;
+}
+
+.col-11 {
+  @apply lg:w-11/12;
+}
+
+.col-12 {
+  @apply w-full;
+}
