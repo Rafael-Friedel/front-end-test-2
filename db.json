@@ -38,7 +38,7 @@
         "color": "Azul",
         "price": 379.0,
         "selfPrice": 284.25,
-        "stock": 1
+        "stock": 2
       },
       {
         "id": 2,
@@ -54,7 +54,7 @@
         "color": "Azul",
         "price": 379.0,
         "selfPrice": 284.25,
-        "stock": 1
+        "stock": 0
       },
       {
         "id": 4,
@@ -110,7 +110,7 @@
         "color": "Preto",
         "price": 379.0,
         "selfPrice": 284.25,
-        "stock": 1
+        "stock": 0
       }
     ]
   }
