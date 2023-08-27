@@ -1,0 +1,126 @@
+{
+  "product": {
+    "id": 1,
+    "name": "macaquinho transpasse estampado sonho belo",
+    "price": 379,
+    "selfPrice": 284.25,
+    "description": "<p>macaquinho transpassado estampado sonho belo. modelo transpassado com pala formando um decote em v. mangas curtas e amplas estilo kimono. tem cintura marcada com pala e amarração na lateral. o modelo é soltinho de viscose. essa é uma peça 100% carbono neutro da coleção do brasil pro mundo.</p>",
+    "category": {
+      "id": 1,
+      "name": "Macacão"
+    },
+    "images": [
+      {
+        "id": 1,
+        "url": "/assets/product/macacao-1.jpg"
+      },
+      {
+        "id": 2,
+        "url": "/assets/product/macacao-2.jpg"
+      },
+      {
+        "id": 3,
+        "url": "/assets/product/macacao-3.jpg"
+      },
+      {
+        "id": 4,
+        "url": "/assets/product/macacao-4.jpg"
+      }
+    ],
+    "skus__fields": {
+      "color": [
+        "Azul",
+        "Preto"
+      ],
+      "size": [
+        "PP",
+        "P",
+        "M",
+        "G",
+        "GG"
+      ]
+    },
+    "skus": [
+      {
+        "id": 1,
+        "size": "PP",
+        "color": "Azul",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 2
+      },
+      {
+        "id": 2,
+        "size": "P",
+        "color": "Azul",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 1
+      },
+      {
+        "id": 3,
+        "size": "M",
+        "color": "Azul",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 0
+      },
+      {
+        "id": 4,
+        "size": "G",
+        "color": "Azul",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 1
+      },
+      {
+        "id": 5,
+        "size": "GG",
+        "color": "Azul",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 1
+      },
+      {
+        "id": 6,
+        "size": "PP",
+        "color": "Preto",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 1
+      },
+      {
+        "id": 7,
+        "size": "P",
+        "color": "Preto",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 1
+      },
+      {
+        "id": 8,
+        "size": "M",
+        "color": "Preto",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 1
+      },
+      {
+        "id": 9,
+        "size": "G",
+        "color": "Preto",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 1
+      },
+      {
+        "id": 10,
+        "size": "GG",
+        "color": "Preto",
+        "price": 379,
+        "selfPrice": 284.25,
+        "stock": 0
+      }
+    ]
+  }
+}
