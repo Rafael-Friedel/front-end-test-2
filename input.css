@@ -8,6 +8,33 @@
   @apply py-1;
 }
 
+.mark-qtty {
+  @apply w-4 h-4 bg-red-500 text-white rounded-full absolute flex items-center justify-center text-xs top-8 left-2 hover:cursor-pointer;
+}
+
+.toast {
+  @apply flex justify-center py-6 px-4 fixed right-4 top-4 border-r-4  rounded-md shadow-md bg-slate-50 animate-pulse duration-1000;
+}
+
+.toast-success {
+  @apply toast border-green-500;
+}
+
+.toast-fail {
+  @apply toast border-red-700
+}
+.pointer {
+  @apply hover:cursor-pointer;
+}
+
+.selected {
+  @apply border-2 border-red-600 scale-110;
+}
+
+.bg-black {
+  @apply bg-[#000];
+}
+
 .container {
   @apply mx-auto w-full px-2 lg:max-w-7xl;
 }
