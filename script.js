@@ -106,26 +106,38 @@ const updatePage = () => {
   updateColors();
   updateSizes();
   getCartQtt();
-  // updateImages();
+  updateImages();
 }
 
-// const updateImages = () => {
-//   const containerImages = document.querySelector('.product__gallery__thumbs');
-//   const oldImages = containerImages.querySelectorAll('.product__gallery__thumb');
-//   oldImages.forEach((image, index) => {
-//     image.querySelector('img').src = data.images[index].url;
-//   })
+const changeMainImage = (e) => {
+  const newSrc = e.target.src.split('0/')[1];
+  const mainImage = document.querySelector('.product__gallery__main').querySelector('img');
+  mainImage.src = newSrc;
+}
 
-// }
+const updateImages = () => {
+  const classSelectable = 'selectable';
+  const mainImage = document.querySelector('.product__gallery__main').querySelector('img');
+  mainImage.className = classSelectable;
+  const containerImages = document.querySelector('.product__gallery__thumbs');
+  const oldImages = containerImages.querySelectorAll('.product__gallery__thumb');
+  oldImages.forEach((image) => {
+    const myImage =  image.querySelector('img');
+    myImage.className = classSelectable;
+    addEventListener('click', (e) => changeMainImage(e))
+  })
+
+}
 
 const verifyStock = () => {
   const size = document.querySelector('.sku__tamanho').querySelector('.selected').innerHTML
   const color = document.querySelector('.sku__cor').querySelector('.selected').innerHTML;
   const stock = data.skus.find((sku) => sku.size === size && sku.color === color).stock;
-    console.log({ size, color, stock});
+  const { name, id, price, selfPrice, category, images} = data
+  const product = { size, color, name, price, selfPrice, id, category, images}
 
     if(stock > 0) {
-      addToCart();
+      addToCart(product);
     } else createToast('fail');
 }
 
@@ -141,9 +153,9 @@ const createToast = (className) => {
   }, 3000)
 }
 
-const addToCart = () => {
+const addToCart = (product) => {
   const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-  localStorage.setItem('cart', JSON.stringify([...cart, data]));
+  localStorage.setItem('cart', JSON.stringify([...cart, product]));
   document.querySelector('.mark-qtty').innerText = cart.length + 1;
   createToast('success');
 }
