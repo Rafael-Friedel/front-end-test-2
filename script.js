@@ -110,9 +110,11 @@ const updatePage = () => {
 }
 
 const changeMainImage = (e) => {
-  const newSrc = e.target.src.split('0/')[1];
-  const mainImage = document.querySelector('.product__gallery__main').querySelector('img');
-  mainImage.src = newSrc;
+  if(e.target.src) {
+    const newSrc = e.target.src.split('0/')[1];
+    const mainImage = document.querySelector('.product__gallery__main').querySelector('img');
+    mainImage.src = newSrc;
+  }
 }
 
 const updateImages = () => {
