@@ -135,8 +135,9 @@ const verifyStock = () => {
   const size = document.querySelector('.sku__tamanho').querySelector('.selected').innerHTML
   const color = document.querySelector('.sku__cor').querySelector('.selected').innerHTML;
   const stock = data.skus.find((sku) => sku.size === size && sku.color === color).stock;
-  const { name, id, price, selfPrice, category, images} = data
-  const product = { size, color, name, price, selfPrice, id, category, images}
+  let { name, id, price, selfPrice, category, images} = data;
+  const uniqueID = Math.floor(Math.random() * 1000) + id;
+  const product = { size, color, name, price, selfPrice, id: uniqueID, category, images}
 
     if(stock > 0) {
       addToCart(product);

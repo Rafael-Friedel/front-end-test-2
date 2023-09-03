@@ -19,8 +19,28 @@ const getCartQtt = () => {
 
 getCartQtt();
 
-const formatPrice = (price) => price.toFixed(2).replace(".", ",")
+const formatPrice = (price) => price.toFixed(2).replace(".", ",");
 
+const createToast = (className) => {
+  const messages = {
+    success: "Produto sendo removido do seu carrinho",
+  }
+  const toast = createCustomElement('div', `toast-${className}`, messages[className]);
+  document.querySelector('body').appendChild(toast);
+  setTimeout(() => {
+    toast.remove()
+  }, 3000)
+}
+
+const removeItemCart = (id) => {
+  const cart = getCart();
+  const newCart = cart.filter((itemCart) => itemCart.id !== id);
+  localStorage.setItem('cart', JSON.stringify(newCart));
+  createToast("success");
+  setTimeout(() => {
+    location.reload();
+  }, 2000);
+}
 const createCardItem = (product) => {
   const { images, size, id, name, selfPrice, price, color } = product;
   const itemCard = createCustomElement("div", "card-item", '');
@@ -41,7 +61,7 @@ const createCardItem = (product) => {
   const containerButton = createCustomElement("div", "list-options", '');
   containerImage.appendChild(containerButton);
   const button = createCustomElement("button", "btt", "Remover da mochila");
-  button.id = id;
+  button.addEventListener("click" ,() => removeItemCart(id))
   containerButton.appendChild(button);
   const containerDescription = createCustomElement("div", "description-item", '');
   itemCard.appendChild(containerDescription);
