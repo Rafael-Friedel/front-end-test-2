@@ -12,19 +12,19 @@
     "images": [
       {
         "id": 1,
-        "url": "/assets/product/macacao-1.jpg"
+        "url": "/assets/images/product/304743_19218_1-MACAQUINHO-TRANSPASSE-SONHO-BELO.webp"
       },
       {
         "id": 2,
-        "url": "/assets/product/macacao-2.jpg"
+        "url": "/assets/images/product/304743_19218_2-MACAQUINHO-TRANSPASSE-SONHO-BELO.webp"
       },
       {
         "id": 3,
-        "url": "/assets/product/macacao-3.jpg"
+        "url": "/assets/images/product/304743_19218_4-MACAQUINHO-TRANSPASSE-SONHO-BELO.webp"
       },
       {
         "id": 4,
-        "url": "/assets/product/macacao-4.jpg"
+        "url": "/assets/images/product/304743_19218_5-MACAQUINHO-TRANSPASSE-SONHO-BELO.webp"
       }
     ],
     "skus__fields": {
