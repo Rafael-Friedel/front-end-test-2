@@ -46,7 +46,14 @@ const createCardItem = (product) => {
   const itemCard = createCustomElement("div", "card-item", '');
   const containerImage = createCustomElement("div", "image-container", '');
   itemCard.appendChild(containerImage);
-  const imageProduct = createCustomElement("img", "image", '', images)
+  const imageProduct = createCustomElement("img", "image", '', window.location.origin + images[0].url)
+  imageProduct.addEventListener("mouseover", () => {
+    imageProduct.src = window.location.origin + images[1].url;
+  })
+  imageProduct.addEventListener("mouseleave", () => {
+    imageProduct.src = window.location.origin + images[0].url;
+  })
+  console.log( window.location.origin + images[0].url);
   containerImage.appendChild(imageProduct);
   const listAttributes = createCustomElement("div", "list-options", '');
   containerImage.appendChild(listAttributes);

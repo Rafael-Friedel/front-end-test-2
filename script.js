@@ -121,11 +121,13 @@ const updateImages = () => {
   const classSelectable = 'selectable';
   const mainImage = document.querySelector('.product__gallery__main').querySelector('img');
   mainImage.className = classSelectable;
+  mainImage.src = window.location.origin + data.images[0].url
   const containerImages = document.querySelector('.product__gallery__thumbs');
   const oldImages = containerImages.querySelectorAll('.product__gallery__thumb');
-  oldImages.forEach((image) => {
+  oldImages.forEach((image, index) => {
     const myImage =  image.querySelector('img');
     myImage.className = classSelectable;
+    myImage.src = window.location.origin + data.images[index].url
     addEventListener('click', (e) => changeMainImage(e))
   })
 
