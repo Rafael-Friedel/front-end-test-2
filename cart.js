@@ -19,22 +19,25 @@ const getCartQtt = () => {
 
 getCartQtt();
 
-const cartList = document.querySelector(".list-card");
-console.log(cartList);
-
 const formatPrice = (price) => price.toFixed(2).replace(".", ",")
 
 const createCardItem = (product) => {
-  const { images, size, id, name, selfPrice, price } = product;
+  const { images, size, id, name, selfPrice, price, color } = product;
   const itemCard = createCustomElement("div", "card-item", '');
   const containerImage = createCustomElement("div", "image-container", '');
   itemCard.appendChild(containerImage);
   const imageProduct = createCustomElement("img", "image", '', images)
   containerImage.appendChild(imageProduct);
-  const listSizes = createCustomElement("div", "list-options", '');
-  containerImage.appendChild(listSizes);
+  const listAttributes = createCustomElement("div", "list-options", '');
+  containerImage.appendChild(listAttributes);
   const sizeProduct = createCustomElement("p", "size-item", size);
-  listSizes.appendChild(sizeProduct);
+  const mapColors = {
+    Azul: "bg-blue-700",
+    Preto: "bg-black",
+  }
+  const colorProduct = createCustomElement("p", `color-item ${mapColors[color]}`, '')
+  listAttributes.appendChild(sizeProduct);
+  listAttributes.appendChild(colorProduct);
   const containerButton = createCustomElement("div", "list-options", '');
   containerImage.appendChild(containerButton);
   const button = createCustomElement("button", "btt", "Remover da mochila");
@@ -62,3 +65,4 @@ const updateListCart = () => {
 }
 
 updateListCart();
+
