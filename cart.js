@@ -53,7 +53,6 @@ const createCardItem = (product) => {
   imageProduct.addEventListener("mouseleave", () => {
     imageProduct.src = window.location.origin + images[0].url;
   })
-  console.log( window.location.origin + images[0].url);
   containerImage.appendChild(imageProduct);
   const listAttributes = createCustomElement("div", "list-options", '');
   containerImage.appendChild(listAttributes);
