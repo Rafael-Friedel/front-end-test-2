@@ -86,3 +86,10 @@ const updateListCart = () => {
 
 updateListCart();
 
+const renderButtons = () => {
+  const buttonSubmit = document.querySelector("#finish");
+  const buttonNavHome = document.querySelector("#nav-home");
+  getCart().length > 0 ? buttonNavHome.className = "no-showing" : buttonSubmit.className = "no-showing"
+}
+
+renderButtons();
